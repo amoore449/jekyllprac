@@ -1,0 +1,19 @@
+---
+layout: "wrapper"
+---
+
+{% for post in site.posts %}
+     <li><a style = "{% if page.url == post.url%}color:red;{%endif%}"href="{{ post.url }}"> {{ post.title }}</a></li>
+{%endfor%}
+
+{% if page.title == "My First Post"%}
+     This is the first post wow.
+{% elsif page.title == "My Second Post" %}
+     This is the second post.
+{%else%}
+     o whoopie
+{% endif %}
+
+<h1>This is a post</h1>
+<hr>
+{{ content }}
